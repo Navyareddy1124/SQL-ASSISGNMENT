@@ -1,9 +1,25 @@
-create database employee_table;
+create database employee_db;
+use employee_db;
+
+create table employee_tb (
+    employeeID int primary key,
+    first_name varchar(50),
+    last_name varchar(50),
+    salary decimal(10,2),
+    joining_Date date,
+    department varchar(50),
+    gender varchar(10),
+    job_title varchar(50)
+);
 show tables;
 
-select * from tbl_emp_detail_data;
-
-create table employee as select * from tbl_emp_detail_data;
+insert into employee_tb values
+(1, 'Rahul', 'Sharma', 55000.00, '2021-03-15', 'IT', 'Male', 'Software Engineer'),
+(2, 'Ananya', 'Reddy', 48000.00, '2020-07-20', 'HR', 'Female', 'HR Executive'),
+(3, 'Arjun', 'Verma', 62000.00, '2019-11-10', 'Finance', 'Male', 'Accountant'),
+(4, 'Meera', 'Patel', 72000.00, '2022-01-25', 'IT', 'Female', 'Senior Developer'),
+(5, 'Rohit', 'Mehra', 40000.00, '2022-05-22', 'Sales', 'Male', 'Sales Executive'),
+(6, 'Neha', 'Singh', 65000.00, '2019-04-10', 'Marketing', 'Female', 'Marketing Manager');
 
 select * from employee;
 
@@ -18,8 +34,8 @@ order by rand() limit 1;
 
 select upper(first_name) as first_name_upper from employee;
 select lower(first_name) as first_name_lower from employee;
-select concat(first_name," " ,last_name) as full_name from employee;
-select concat("Hello ", first_name) 
+select concat(" ".first_name,last_name) as full_name from employee;
+select concat("Hello",first_name) 
 from employee;
 
 select * from employee
