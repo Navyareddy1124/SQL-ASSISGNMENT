@@ -21,6 +21,9 @@ insert into employee_tb values
 (5, 'Rohit', 'Mehra', 40000.00, '2022-05-22', 'Sales', 'Male', 'Sales Executive'),
 (6, 'Neha', 'Singh', 65000.00, '2019-04-10', 'Marketing', 'Female', 'Marketing Manager');
 
+select * from tbl_emp_detail_data;
+create table employeee as select * from tbl_employee_detail_data;
+
 select * from employee;
 
 select * from employee 
@@ -223,7 +226,6 @@ order by total_salary desc;
 
 select * from tbl_project_details;
 create table project as select * from tbl_project_details;
-
 
 select project_name
 from project
