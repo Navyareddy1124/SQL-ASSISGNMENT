@@ -27,13 +27,13 @@ create table employeee as select * from tbl_employee_detail_data;
 select * from employee;
 
 select * from employee 
-order by desc limit 1;
+order by emp_id desc limit 1;
 
 select * from employee
-order by limit 1;
+order by  emp_id limit 1;
 
 select * from employee
-order by rand() limit 1;
+order by emp_id rand() limit 1;
 
 select upper(first_name) as first_name_upper from employee;
 select lower(first_name) as first_name_lower from employee;
@@ -83,9 +83,9 @@ from employee;
 select  min(salary) as min_salary,
     max(salary) as max_salary,
     avg(salary) as avg_salary,
-(max(salary) - min(salary)) as diff_salary,
+(max(salary) - min(salary)) as diff_salary
 from employee;
-select round(((max(salary) - min(salary)) / max(salary)) * 100, 2), '%') as percent_diff
+select round(((max(salary) - min(salary)) / max(salary)) * 100, 2) as percent_diff
 from employee;
     
 select rtrim(first_name)
