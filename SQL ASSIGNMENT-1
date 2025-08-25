@@ -37,7 +37,7 @@ order by rand() limit 1;
 
 select upper(first_name) as first_name_upper from employee;
 select lower(first_name) as first_name_lower from employee;
-select concat(" ".first_name,last_name) as full_name from employee;
+select concat(" ",first_name,last_name) as full_name from employee;
 select concat("Hello",first_name) 
 from employee;
 
